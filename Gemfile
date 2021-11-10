@@ -10,6 +10,4 @@ group :development do
   gem 'rubocop', '~> 1.22', '>= 1.22.3'
 end
 
-gem 'dry-struct', '~> 1.4'
-
 gemspec
