@@ -5,7 +5,7 @@ require 'warframe/rest/api/nightwave'
 module Warframe
   module REST
     module API
-      include Warframe::REST::Nightwave
+      include Warframe::REST::API::Nightwave
     end
   end
 end
