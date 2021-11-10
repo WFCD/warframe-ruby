@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'dry-struct', '~> 1.4'
+  spec.add_dependency 'fast_underscore', '~> 0.3.2'
   spec.add_dependency 'http', '~> 5.0', '>= 5.0.4'
   spec.add_development_dependency 'bundler', '~> 2.2', '>= 2.2.31'
   spec.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
