@@ -6,7 +6,8 @@ module Warframe
   module Models
     # Nightwave Model
     class Nightwave < Warframe::Models::Base
-      attr_accessor :id, :activation, :expiry, :rewardTypes, :season, :tag, :phase
+      attr_accessor :id, :activation, :expiry, :reward_types, :season,
+                    :tag, :phase, :possible_challenges, :active_challenges
       # Implement DRY-Struct
       # attribute :id, Types::String
       # attribute :activation, Types::Date
