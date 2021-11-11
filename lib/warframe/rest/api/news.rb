@@ -6,8 +6,12 @@ require 'warframe/rest/utils'
 module Warframe
   module REST
     module API
-      # https://docs.warframestat.us/#tag/Worldstate/paths/~1{platform}~1news/get
+      # API endpoint for getting information from the News route.
+      # {https://api.warframestat.us/pc/news Example Response}
       module News
+
+        # Gets the current news
+        # @return [Array<Warframe::Models::News>]
         def news
           get('/news', Warframe::Models::News)
         end

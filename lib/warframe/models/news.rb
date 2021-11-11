@@ -4,7 +4,7 @@ require 'warframe/models/base'
 
 module Warframe
   module Models
-    # Class for the response of {https://api.warframestat.us/pc/news /:platform/news}
+    # Model for the response of {https://api.warframestat.us/pc/news /:platform/news}
     class News < Warframe::Models::Base
       # The ID of the News Model's Instance.
       # @return [String]

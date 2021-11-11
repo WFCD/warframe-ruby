@@ -10,9 +10,8 @@ module Warframe
 
       # @param path [String]
       # @param klass [Warframe::Models]
-      # @param options [Hash]
-      def get(path, klass, options = {})
-        Warframe::REST::Request.new(@client || self, path, klass, options).send
+      def get(path, klass)
+        Warframe::REST::Request.new(@client || self, path, klass).send
       end
     end
   end

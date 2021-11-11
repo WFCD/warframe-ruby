@@ -4,7 +4,7 @@ require 'warframe/models/base'
 
 module Warframe
   module Models
-    # Class for the response of {https://api.warframestat.us/pc/nightwave /:platform/nightwave}
+    # Model for the response of {https://api.warframestat.us/pc/nightwave /:platform/nightwave}
     class Nightwave < Warframe::Models::Base
 
       # The ID of the Nightwave Response.

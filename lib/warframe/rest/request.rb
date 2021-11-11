@@ -6,23 +6,32 @@ require 'json'
 
 module Warframe
   module REST
-    # A request to send to the Warframe Stat API
+    # A request to send to the Warframe Stat API.
     class Request
-      attr_accessor :client, :path, :options
+      # @return [Warframe::REST::Client]
+      attr_reader :client
+
+      # @return [String]
+      attr_reader :path
+
+      # @return [Hash]
+      attr_reader :options
 
       # Instantiate a Request
       #
-      # @param client [Warframe::Rest::Client]
-      # @param klass [Class]
-      # @param options [Hash]
-      # @return [Warframe:Rest:Request]
-      def initialize(client, path, klass, options = {})
+      # @param client [Warframe::REST::Client]
+      # @param path [String]
+      # @param klass [Warframe::Models]
+      # @return [Warframe:REST:Request]
+      def initialize(client, path, klass)
         @client = client
         @path = client.base_url + path
-        @options = options
         @klass = klass
       end
 
+      # Sends an HTTP request with the attached parameters and headers.
+      # Will either return the Model, or collection of Models.
+      # @return [Warframe::Models, Array<[Warframe::Models]>]
       def send
         uri = URI(path)
         req = Net::HTTP::Get.new(uri)
@@ -32,8 +41,9 @@ module Warframe
 
       private
 
+      # Returns the parsed JSON response in the form of a [Warframe::Models] or an array of [Warframe::Models]
       # @param resp [Net::HTTP.get]
-      # @return [Warframe::Models::Class || [Array.<[Warframe::Models::Class]>]]
+      # @return [Warframe::Models, Array<[Warframe::Models]>]
       def return_parsed(resp)
         parsed = JSON.parse(resp)
         parsed.is_a?(Array) ? parsed.map { |obj| @klass.new obj } : @klass.new(parsed)

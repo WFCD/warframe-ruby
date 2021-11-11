@@ -4,7 +4,7 @@ require 'fast_underscore'
 
 module Warframe
   module Models
-    # Warfame Base Model
+    # Warframe Base Model.
     # Defaults to initialize from a [Hash],
     # {from_array} allows for instantiation from an [Array].
     class Base
