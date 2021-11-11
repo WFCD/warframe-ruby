@@ -14,9 +14,6 @@ module Warframe
       # @return [String]
       attr_reader :path
 
-      # @return [Hash]
-      attr_reader :options
-
       # Instantiate a Request
       #
       # @param client [Warframe::REST::Client]
