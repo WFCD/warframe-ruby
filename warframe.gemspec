@@ -25,8 +25,8 @@ Gem::Specification.new do |spec|
 
   # Dependencies
   spec.required_ruby_version = '>= 2.5.0'
-  spec.add_runtime_dependency 'fast_underscore', '~> 0.3.2'
-  spec.add_runtime_dependency 'http', '~> 5.0', '>= 5.0.4'
+  spec.add_dependency 'fast_underscore', '~> 0.3.2'
+  spec.add_dependency 'http', '~> 5.0', '>= 5.0.4'
   spec.add_development_dependency 'bundler', '~> 2.2', '>= 2.2.31'
   spec.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
   spec.add_development_dependency 'yard', '~> 0.9.26'
