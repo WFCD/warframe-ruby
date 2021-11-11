@@ -23,11 +23,23 @@ Gem::Specification.new do |spec|
   spec.bindir = 'exe'
   spec.require_paths = ['lib']
 
+  # Specify which files should be added to the gem when it is released.
+  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
+  spec.files = Dir.chdir(File.expand_path(__dir__)) do
+    `git ls-files -z`.split("\x0").reject do |f|
+      (f == __FILE__) || f.match(%r{\A(?:(?:test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
+    end
+  end
+
+
   # Dependencies
   spec.required_ruby_version = '>= 2.5.0'
   spec.add_dependency 'fast_underscore', '~> 0.3.2'
   spec.add_dependency 'http', '~> 5.0', '>= 5.0.4'
+  spec.add_development_dependency 'activesupport', '~> 5.0', '>= 5.0.0.1'
   spec.add_development_dependency 'bundler', '~> 2.2', '>= 2.2.31'
   spec.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
+  spec.add_development_dependency 'rspec', '~> 3.10'
+  spec.add_development_dependency 'rubocop', '~> 1.22', '>= 1.22.3'
   spec.add_development_dependency 'yard', '~> 0.9.26'
 end
