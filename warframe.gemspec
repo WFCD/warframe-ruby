@@ -31,7 +31,6 @@ Gem::Specification.new do |spec|
     end
   end
 
-
   # Dependencies
   spec.required_ruby_version = '>= 2.5.0'
   spec.add_dependency 'fast_underscore', '~> 0.3.2'
