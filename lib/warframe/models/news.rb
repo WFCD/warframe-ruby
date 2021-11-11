@@ -3,6 +3,7 @@
 require_relative './base'
 require_relative './common/translations'
 require_relative './common/eta'
+require_relative './common/id'
 
 module Warframe
   module Models
@@ -10,10 +11,7 @@ module Warframe
     class News < Warframe::Models::Base
       include Warframe::Models::Common::Translations
       include Warframe::Models::Common::ETA
-
-      # The ID of the News Model's Instance.
-      # @return [String]
-      attr_reader :id
+      include Warframe::Models::Common::ID
 
       # The date the news was released.
       # @return [String]

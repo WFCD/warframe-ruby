@@ -2,20 +2,18 @@
 
 require_relative './base'
 require_relative './common/active'
+require_relative './common/id'
+require_relative './common/expiry'
+require_relative './common/reward_types'
 
 module Warframe
   module Models
     # Model for the response of {https://api.warframestat.us/pc/nightwave /:platform/nightwave}
     class Nightwave < Warframe::Models::Base
-      include Warframe::Models::Common::Active
-
-      # The ID of the Nightwave Response.
-      # @return [String]
-      attr_reader :id
-
-      # The types of rewards you can get from this event.
-      # @return [Array<String>]
-      attr_reader :reward_types
+      include Warframe::Models::Common::Activation
+      include Warframe::Models::Common::ID
+      include Warframe::Models::Common::Expiry
+      include Warframe::Models::Common::RewardTypes
 
       # The current phase of this event.
       # @return [Integer]
