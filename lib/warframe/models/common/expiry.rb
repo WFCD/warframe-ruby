@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Warframe
   module Models
     # Common Attributes between models.
