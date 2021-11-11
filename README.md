@@ -1,8 +1,10 @@
-# Warframe
+# warframe-ruby
+[![Ruby Gem Version](https://badgen.net/rubygems/v/warframe)](https://rubygems.org/gems/palindrome_ext)
+[![Downloads](https://badgen.net/rubygems/dt/warframe)](https://rubygems.org/gems/palindrome_ext)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
+[![Platform](https://badgen.net/rubygems/p/warframe)](https://www.ruby-lang.org/en/)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/warframe`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby client for [Warframe Stat](https://warframestat.us) bringing you live modeled data from their API.
 
 ## Installation
 
@@ -22,17 +24,43 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To get started accessing live data, you must instantiate a new `Warframe::REST::Client`
+```ruby
+require 'warframe'
+
+client = Warframe::REST::Client.new # => <Warframe::REST::Client platform='pc' language='en'>
+
+# You can supply a hash to set your preferred platform or language.
+my_custom_options = { platform: 'ps4', language: 'de' }
+german_ps4 = Warframe::REST:Client.new my_custom_options # => <Warframe::REST::Client platform='ps4' language='de'>
+```
+
+This gives us access to a plethora of methods, check out the [documentation](https://rubydoc.info/gems/warframe) for more info.
+```ruby
+
+client = Warframe::REST::Client.new
+client.nightwave # => <Warframe::Models::Nightwave>
+client.alerts # => [ <Warframe::Models::Alert>, <Warframe::Models::Alert> ]
+```
+
+## Documentation
+
+Documentation is currently provided by [rubydoc.info](https://rubydoc.info), check out the current version documentation at https://rubydoc.info/gems/warframe.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+### Dependency Management
+After checking out the repo, run `bundle install` to install required dependencies. 
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### Testing
+To check if your changes are passing tests, run `rake test`. Testing framework provided by [RSpec](https://rspec.info/).
+
+### Linting
+To auto-correct styling offenses, run `rake lint`. All linting is provided by [RuboCop](https://github.com/rubocop/rubocop).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/warframe. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/warframe/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/aj-rom/warframe-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/warframe/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
