@@ -13,6 +13,7 @@ module Warframe
       def initialize(options = {})
         options.each do |k, v|
           renamed = k.to_s.underscore
+          v = v.map { |obj| OpenStruct.new obj } if v.is_a?(Array) && v[0].is_a?(Hash)
           instance_variable_set "@#{renamed}", v
         end
       end
