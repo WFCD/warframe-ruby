@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'fast_underscore'
-require 'dm-core'
 
 module Warframe
   module Models
@@ -9,9 +8,7 @@ module Warframe
     # Defaults to initialize from a [Hash],
     # {from_array} allows for instantiation from an [Array].
     class Base
-      include DataMapper::Resource
-      property :error, String
-      property :code, Integer
+      attr_reader :error, :code
 
       def initialize(options = {})
         options.each do |k, v|
