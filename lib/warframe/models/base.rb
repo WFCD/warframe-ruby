@@ -16,11 +16,7 @@ module Warframe
       def initialize(options = {})
         options.each do |k, v|
           renamed = k.to_s.underscore
-          if v.is_a? Boolean
-            instance_variable_set "@#{renamed}?", v
-          else
-            instance_variable_set "@#{renamed}", v
-          end
+          instance_variable_set "@#{renamed}", v
         end
       end
 
