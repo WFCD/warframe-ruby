@@ -45,7 +45,7 @@ client.alerts # => [ <Warframe::Models::Alert>, <Warframe::Models::Alert> ]
 
 ## Documentation
 
-Documentation is currently provided by [rubydoc.info](https://rubydoc.info), check out the current version documentation at https://rubydoc.info/gems/warframe.
+Documentation is currently provided by [rubydoc.info](https://rubydoc.info), check out the current versions documentation at https://rubydoc.info/gems/warframe.
 
 ## Development
 
