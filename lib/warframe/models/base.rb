@@ -1,22 +1,33 @@
 # frozen_string_literal: true
 
-# require 'dry-struct'
 require 'fast_underscore'
-
-# module Types
-#   include Dry.Types()
-#
-#   Date = Strict::Date | JSON::Date
-#   Symbol = Strict::Symbol | JSON::Symbol
-#   Time = Strict::Time | JSON::Time
-#   Decimal = Coercible::Decimal
-# end
+require 'dm-core'
 
 module Warframe
   module Models
+    # Warfame Base Model
+    # Defaults to initialize from a [Hash],
+    # {from_array} allows for instantiation from an [Array].
     class Base
+      include DataMapper::Resource
+      property :error, String
+      property :code, Integer
+
       def initialize(options = {})
-        options.each { |k, v| instance_variable_set "@#{k.to_s.underscore}", v }
+        options.each do |k, v|
+          renamed = k.to_s.underscore
+          if v.is_a? Boolean
+            instance_variable_set "@#{renamed}?", v
+          else
+            instance_variable_set "@#{renamed}", v
+          end
+        end
+      end
+
+      # Constructs an Array of new objects
+      # @return [Array]
+      def self.from_array(arr)
+        arr.map { |obj| initialize obj }
       end
     end
   end
