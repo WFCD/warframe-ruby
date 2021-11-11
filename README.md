@@ -1,6 +1,6 @@
 # warframe-ruby
-[![Ruby Gem Version](https://badgen.net/rubygems/v/warframe)](https://rubygems.org/gems/palindrome_ext)
-[![Downloads](https://badgen.net/rubygems/dt/warframe)](https://rubygems.org/gems/palindrome_ext)
+[![Ruby Gem Version](https://badgen.net/rubygems/v/warframe)](https://rubygems.org/gems/warframe)
+[![Downloads](https://badgen.net/rubygems/dt/warframe)](https://rubygems.org/gems/warframe)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 [![Platform](https://badgen.net/rubygems/p/warframe)](https://www.ruby-lang.org/en/)
 
