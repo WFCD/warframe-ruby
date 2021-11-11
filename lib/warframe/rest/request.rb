@@ -22,7 +22,7 @@ module Warframe
       # @return [Warframe:REST:Request]
       def initialize(client, path, klass)
         @client = client
-        @path = client.base_url + path
+        @path = client.base_url + path + "?language=#{@client.language}"
         @klass = klass
       end
 
@@ -32,7 +32,6 @@ module Warframe
       def send
         uri = URI(path)
         req = Net::HTTP::Get.new(uri)
-        req['Accept-Language'] = @client.language
         return_parsed get_response uri, req
       end
 
@@ -48,7 +47,6 @@ module Warframe
 
       def get_response(uri, req)
         Net::HTTP.get(uri) do |http|
-          http['Accept-Language'] = @client.language
           http.use_ssl = true
           http.request req
         end
