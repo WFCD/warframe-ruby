@@ -1,6 +1,6 @@
 # warframe-ruby
-[![Ruby Gem Version](https://badgen.net/rubygems/v/warframe)](https://rubygems.org/gems/palindrome_ext)
-[![Downloads](https://badgen.net/rubygems/dt/warframe)](https://rubygems.org/gems/palindrome_ext)
+[![Ruby Gem Version](https://badgen.net/rubygems/v/warframe)](https://rubygems.org/gems/warframe)
+[![Downloads](https://badgen.net/rubygems/dt/warframe)](https://rubygems.org/gems/warframe)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 [![Platform](https://badgen.net/rubygems/p/warframe)](https://www.ruby-lang.org/en/)
 
@@ -53,19 +53,23 @@ Documentation is currently provided by [rubydoc.info](https://rubydoc.info), che
 After checking out the repo, run `bundle install` to install required dependencies. 
 
 ### Testing
-To check if your changes are passing tests, run `rake test`. Testing framework provided by [RSpec](https://rspec.info/).
+To check if your changes are passing tests, run:
+
+    $ rake test
+
+> Testing framework provided by [RSpec](https://rspec.info/).
 
 ### Linting
-To auto-correct styling offenses, run `rake lint`. All linting is provided by [RuboCop](https://github.com/rubocop/rubocop).
+To auto-correct styling offenses, run: 
+
+    $ rake lint
+
+> All linting is provided by [RuboCop](https://github.com/rubocop/rubocop).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/aj-rom/warframe-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/warframe/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/aj-rom/warframe-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/aj-rom/warframe-ruby/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Warframe project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/warframe/blob/master/CODE_OF_CONDUCT.md).
