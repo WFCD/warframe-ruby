@@ -9,31 +9,31 @@ module Warframe
 
       # The ID of the Nightwave Response.
       # @return [String]
-      property :id, String
+      attr_reader :id
 
       # The Time the Mission was or will be activated.
       # @return [String]
-      property :activation, String
+      attr_reader :activation
 
       # The time that the mission will expire.
       # @return [String]
-      property :expiry, String
+      attr_reader :expiry
 
       # The types of rewards you can get from this event.
       # @return [Array<String>]
-      property :reward_types, Array
+      attr_reader :reward_types
 
       # The current phase of this event.
       # @return [Integer]
-      property :phase, Integer
+      attr_reader :phase
 
       # List of all possible challenges.
       # @return [Array<Hash>]
-      property :possible_challenges, Array
+      attr_reader :possible_challenges
 
       # Active Challenges for this event.
       # @return [Array<Hash>]
-      property :active_challenges, Array
+      attr_reader :active_challenges
     end
   end
 end

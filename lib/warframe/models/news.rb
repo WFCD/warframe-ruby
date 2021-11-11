@@ -8,47 +8,51 @@ module Warframe
     class News < Warframe::Models::Base
       # The ID of the News Model's Instance.
       # @return [String]
-      property :id, String
+      attr_reader :id
 
       # The Date the News was released
       # @return [String]
-      property :date, String
+      attr_reader :date
 
       # The Image Link from the News page.
       # @return [String]
-      property :image_link, String
+      attr_reader :image_link
 
       # Estimated Time of Arrival.
       # @return [String]
-      property :eta, String
+      attr_reader :eta
 
       # Link for more information on this News.
       # @return [String]
-      property :link, String
+      attr_reader :link
 
       # Whether or not the News has to do with Prime Access.
       # @return [Boolean]
-      property :prime_access?, Boolean
+      attr_reader :prime_access
+      alias prime_access? prime_access
 
       # Whether or not a DEV Stream is Available.
       # @return [Boolean]
-      property :stream?, Boolean
+      attr_reader :stream
+      alias stream? stream
 
       # Whether or not this news is regarding an update
       # @return [Boolean]
-      property :update?, Boolean
+      attr_reader :update
+      alias update? update
 
       # Whether or not this news is of priority
       # @return [Boolean]
-      property :priority?, Boolean
+      attr_reader :priority
+      alias priority? priority
 
       # The entire response as a long string
       # @return [String]
-      property :as_string, String
+      attr_reader :as_string
 
       # The actual message of the News
       # @return [String]
-      property :message, String
+      attr_reader :message
 
       # Available translations for the the News.
       # @return [Hash<String, String>] Key as language code and Value as translation.
