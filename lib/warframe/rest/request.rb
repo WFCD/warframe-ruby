@@ -42,7 +42,7 @@ module Warframe
       # @return [Warframe::Models, Array<[Warframe::Models]>]
       def return_parsed(resp)
         parsed = JSON.parse(resp)
-        parsed.is_a?(Array) ? parsed.map { |obj| @klass.new obj } : @klass.new(parsed)
+        @klass.new parsed
       end
 
       def get_response(uri, req)
