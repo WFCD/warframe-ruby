@@ -3,23 +3,28 @@
 require_relative 'lib/warframe/version'
 
 Gem::Specification.new do |spec|
+  # Required
   spec.name = 'warframe'
   spec.version = Warframe::VERSION
   spec.authors = ['A.J. Romaniello']
-  spec.email = ['ajiellodev@gmail.com']
 
+  # Descriptive
   spec.summary = 'A Ruby interface to the WarframeStat API.'
   spec.description = spec.summary
-  spec.homepage = 'https://github.com/aj-rom/warframe-ruby'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.5.0'
+  spec.homepage = 'https://github.com/aj-rom/warframe-ruby'
 
-  spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = spec.homepage
+  # MetaData
+  spec.metadata['source_code_uri'] = 'https://github.com/aj-rom/warframe-ruby'
+  spec.metadata['bug_tracker_uri'] = "#{spec.metadata['source_code_uri']}/issues"
+  spec.metadata['documentation_uri'] = "https://rubydoc.info/gems/#{spec.name}/#{spec.version}"
 
+  # Executables / Files
   spec.bindir = 'exe'
   spec.require_paths = ['lib']
 
+  # Dependencies
+  spec.required_ruby_version = '>= 2.5.0'
   spec.add_runtime_dependency 'fast_underscore', '~> 0.3.2'
   spec.add_runtime_dependency 'http', '~> 5.0', '>= 5.0.4'
   spec.add_development_dependency 'bundler', '~> 2.2', '>= 2.2.31'
