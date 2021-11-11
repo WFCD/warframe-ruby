@@ -1,22 +1,17 @@
 # frozen_string_literal: true
 
 require_relative './base'
+require_relative './common/active'
 
 module Warframe
   module Models
     # Model for the response of {https://api.warframestat.us/pc/nightwave /:platform/nightwave}
     class Nightwave < Warframe::Models::Base
+      include Warframe::Models::Common::Active
+
       # The ID of the Nightwave Response.
       # @return [String]
       attr_reader :id
-
-      # The Time the Mission was or will be activated.
-      # @return [String]
-      attr_reader :activation
-
-      # The time that the mission will expire.
-      # @return [String]
-      attr_reader :expiry
 
       # The types of rewards you can get from this event.
       # @return [Array<String>]
@@ -32,7 +27,7 @@ module Warframe
 
       # The current Nightwave Season
       # @return [Integer]
-      attr_reader :integer
+      attr_reader :season
 
       # List of all possible challenges.
       # @return [Array<OpenStruct>]

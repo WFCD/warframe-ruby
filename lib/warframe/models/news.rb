@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
 require_relative './base'
+require_relative './common/translations'
+require_relative './common/eta'
 
 module Warframe
   module Models
     # Model for the response of {https://api.warframestat.us/pc/news /:platform/news}
     class News < Warframe::Models::Base
+      include Warframe::Models::Common::Translations
+      include Warframe::Models::Common::ETA
+
       # The ID of the News Model's Instance.
       # @return [String]
       attr_reader :id
@@ -17,10 +22,6 @@ module Warframe
       # The image link from the news page.
       # @return [String]
       attr_reader :image_link
-
-      # Estimated Time Until Arrival
-      # @return [String]
-      attr_reader :eta
 
       # Link for more information on this news.
       # @return [String]
@@ -49,14 +50,6 @@ module Warframe
       # The entire response as a long string.
       # @return [String]
       attr_reader :as_string
-
-      # The actual message of the news.
-      # @return [String]
-      attr_reader :message
-
-      # Available translations for the the news.
-      # @return [OpenStruct]
-      attr_reader :translations
     end
   end
 end
