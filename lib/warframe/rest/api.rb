@@ -6,6 +6,11 @@ require_relative 'api/alerts'
 
 module Warframe
   module REST
+    # The API Router for getting live data.
+    #
+    # Attempting to have every accessible route from {https://docs.warframestat.us Warframe Stat}.
+    #
+    # Module names are 'routes' to this API. See {Warframe::REST::API::Alerts Alerts} for example.
     module API
       include Warframe::REST::API::Nightwave
       include Warframe::REST::API::News

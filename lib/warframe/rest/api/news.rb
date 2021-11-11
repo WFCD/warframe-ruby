@@ -7,6 +7,7 @@ module Warframe
   module REST
     module API
       # API endpoint for getting information from the News route.
+      #
       # {https://api.warframestat.us/pc/news Example Response}
       module News
         # Gets the current news

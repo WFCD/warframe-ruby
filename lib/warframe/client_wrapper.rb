@@ -1,22 +1,30 @@
 # frozen_string_literal: true
 
 module Warframe
-  # Wraps the [Warframe::Rest::Client] with necessary variables and methods
+  # @abstract
+  # Wraps the {Warframe::REST::Client REST::Client} with necessary variables and methods.
+  #
+  # This class should < not be used > for interacting with the API.
   class ClientWrapper
     BASE_URL = 'https://api.warframestat.us/'
     DEFAULT_OPTIONS = { platform: 'pc', language: 'en' }.freeze
     attr_accessor :platform, :language
 
-    # Initialize the Restful Client
+    # Initialize the Wrapper for {Warframe::REST::Client REST::Client}
     #
-    # @param options [Hash]
-    # @return [Warframe::Client]
+    # @param options [Hash] merges with {DEFAULT_OPTIONS}
+    #
+    # See {Warframe::REST::Client REST::Client} for all accepted languages, platforms, and examples.
+    #
+    # This class is ABSTRACT and should not be instantiated outside of {Warframe::REST::Client REST::Client}.
+    # @return [Warframe::ClientWrapper]
     def initialize(options = {})
       DEFAULT_OPTIONS.merge(options).each { |k, v| instance_variable_set "@#{k}", v }
 
       yield self if block_given?
     end
 
+    # @return [String] the base url and platform combined.
     def base_url
       BASE_URL + platform
     end

@@ -7,6 +7,7 @@ module Warframe
   module REST
     module API
       # API endpoint for getting information from the Nightwave route.
+      #
       # {https://api.warframestat.us/pc/nightwave Example Response}
       module Nightwave
         include Warframe::REST::Utils

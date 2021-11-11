@@ -5,10 +5,11 @@ require 'fast_underscore'
 module Warframe
   module Models
     # Warframe Base Model.
-    # @param options [Hash, Array]
     class Base
       attr_reader :error, :code
 
+      # Creates a new [Warframe::Models::Base] instance.
+      # @param options [Hash, Array] a parsed JSON object, or collection of JSON objects.
       def initialize(options = {})
         if options.is_a? Array
           from_array options
@@ -24,7 +25,7 @@ module Warframe
 
       private
 
-      # Constructs an Array of new [Warframe::Models::Base].
+      # Constructs an Array of new [Warframe::Models::Base]'s'.
       # @return [Array]
       def from_array(arr)
         arr.map { |obj| initialize obj }
