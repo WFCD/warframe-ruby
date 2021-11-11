@@ -7,7 +7,7 @@ RSpec.describe Warframe::REST::API do
 
   context 'Routes' do
     routes.each do |route|
-      method = route.to_s.downcase
+      method = route.to_s.underscore.downcase
       describe route do
         it 'responds to method call' do
           expect(default_client.send(method))
