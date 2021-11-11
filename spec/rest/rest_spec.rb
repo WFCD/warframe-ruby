@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'rspec'
+require 'active_support/core_ext/string/inflections'
+
 RSpec.describe Warframe::REST::API do
   let(:default_client) { Warframe::REST::Client.new }
 
@@ -15,7 +18,7 @@ RSpec.describe Warframe::REST::API do
 
         it 'properly loads data' do
           sent = default_client.send(method)
-          model_instance = Warframe::Models.const_get(route)
+          model_instance = Warframe::Models.const_get(route.to_s.singularize)
           if sent.is_a? Array
             expect(sent.count).to be_positive
             expect(sent[0].id).to_not be nil
