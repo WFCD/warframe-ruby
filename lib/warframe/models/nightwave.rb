@@ -6,7 +6,6 @@ module Warframe
   module Models
     # Model for the response of {https://api.warframestat.us/pc/nightwave /:platform/nightwave}
     class Nightwave < Warframe::Models::Base
-
       # The ID of the Nightwave Response.
       # @return [String]
       attr_reader :id
@@ -26,6 +25,14 @@ module Warframe
       # The current phase of this event.
       # @return [Integer]
       attr_reader :phase
+
+      # The current Nightwave Tag
+      # @return [String]
+      attr_reader :tag
+
+      # The current Nightwave Season
+      # @return [Integer]
+      attr_reader :integer
 
       # List of all possible challenges.
       # @return [Array<Hash>]
