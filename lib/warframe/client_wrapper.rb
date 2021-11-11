@@ -6,7 +6,9 @@ module Warframe
   #
   # This class should < not be used > for interacting with the API.
   class ClientWrapper
+    # The base Warframe Stat API link
     BASE_URL = 'https://api.warframestat.us/'
+    # Default attributes
     DEFAULT_OPTIONS = { platform: 'pc', language: 'en' }.freeze
     attr_accessor :platform, :language
 

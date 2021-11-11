@@ -3,6 +3,7 @@
 require 'fast_underscore'
 
 module Warframe
+  # Models of HTTP responses.
   module Models
     # Warframe Base Model.
     class Base

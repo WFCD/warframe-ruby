@@ -5,6 +5,7 @@ require_relative 'api/news'
 require_relative 'api/alerts'
 
 module Warframe
+  # A REST-ful API service, provided by https://api.warframestat.us
   module REST
     # The API Router for getting live data.
     #

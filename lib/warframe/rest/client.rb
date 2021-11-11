@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'warframe/client_wrapper'
-require 'warframe/rest/api'
+require_relative './api'
 
 module Warframe
   module REST
