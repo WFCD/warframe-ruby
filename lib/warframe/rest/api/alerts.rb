@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'warframe/models/alerts'
+require 'warframe/models/alert'
 require_relative '../utils'
 
 module Warframe
@@ -13,9 +13,9 @@ module Warframe
         include Warframe::REST::Utils
 
         # Gets the current Alerts data.
-        # @return [Array<[Warframe::Models::Alerts]>]
+        # @return [Array<[Warframe::Models::Alert]>]
         def alerts
-          get('/alerts', Warframe::Models::Alerts)
+          get('/alerts', Warframe::Models::Alert)
         end
       end
     end

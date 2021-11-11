@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'warframe/models/invasions'
+require 'warframe/models/invasion'
 require_relative '../utils'
 
 module Warframe
@@ -13,9 +13,9 @@ module Warframe
         include Warframe::REST::Utils
 
         # Gets the current Invasions data.
-        # @return [Array<[Warframe::Models::Invasions]>]
+        # @return [Array<[Warframe::Models::Invasion]>]
         def invasions
-          get('/invasions', Warframe::Models::Invasions)
+          get('/invasions', Warframe::Models::Invasion)
         end
       end
     end
