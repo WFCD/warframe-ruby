@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'warframe/models/base'
+require_relative './base'
 
 module Warframe
   module Models
@@ -35,11 +35,11 @@ module Warframe
       attr_reader :integer
 
       # List of all possible challenges.
-      # @return [Array<Hash>]
+      # @return [Array<OpenStruct>]
       attr_reader :possible_challenges
 
       # Active Challenges for this event.
-      # @return [Array<Hash>]
+      # @return [Array<OpenStruct>]
       attr_reader :active_challenges
     end
   end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'warframe/models/news'
-require 'warframe/rest/utils'
+require_relative '../utils'
 
 module Warframe
   module REST
