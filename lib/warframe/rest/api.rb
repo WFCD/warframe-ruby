@@ -3,6 +3,7 @@
 require_relative 'api/nightwave'
 require_relative 'api/news'
 require_relative 'api/alerts'
+require_relative 'api/invasions'
 
 module Warframe
   # A REST-ful API service, provided by https://api.warframestat.us
@@ -16,6 +17,7 @@ module Warframe
       include Warframe::REST::API::Nightwave
       include Warframe::REST::API::News
       include Warframe::REST::API::Alerts
+      include Warframe::REST::API::Invasions
     end
   end
 end
