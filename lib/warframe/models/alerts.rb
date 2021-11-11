@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative './base'
-require_relative './attributes/expired'
+require_relative './attributes/expiry'
 require_relative './attributes/active'
 require_relative './attributes/eta'
 require_relative './attributes/reward_types'
