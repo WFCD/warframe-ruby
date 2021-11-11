@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   # MetaData
   spec.metadata['source_code_uri'] = 'https://github.com/aj-rom/warframe-ruby'
   spec.metadata['bug_tracker_uri'] = "#{spec.metadata['source_code_uri']}/issues"
-  spec.metadata['documentation_uri'] = "https://rubydoc.info/gems/#{spec.name}/#{spec.version}"
+  spec.metadata['documentation_uri'] = "https://rubydoc.info/gems/#{spec.name}"
 
   # Executables / Files
   spec.bindir = 'exe'
