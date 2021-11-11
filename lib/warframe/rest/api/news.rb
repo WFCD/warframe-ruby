@@ -10,7 +10,9 @@ module Warframe
       #
       # {https://api.warframestat.us/pc/news Example Response}
       module News
-        # Gets the current news
+        include Warframe::REST::Utils
+
+        # Gets the current news data.
         # @return [Array<Warframe::Models::News>]
         def news
           get('/news', Warframe::Models::News)

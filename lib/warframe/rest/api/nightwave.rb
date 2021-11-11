@@ -12,7 +12,7 @@ module Warframe
       module Nightwave
         include Warframe::REST::Utils
 
-        # Gets the current Nightwave Mission data
+        # Gets the current Nightwave Mission data.
         # @return [Warframe::Models::Nightwave]
         def nightwave
           get('/nightwave', Warframe::Models::Nightwave)

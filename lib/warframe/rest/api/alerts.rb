@@ -12,7 +12,7 @@ module Warframe
       module Alerts
         include Warframe::REST::Utils
 
-        # Gets the current Alert data
+        # Gets the current Alerts data.
         # @return [Array<[Warframe::Models::Alerts]>]
         def alerts
           get('/alerts', Warframe::Models::Alerts)

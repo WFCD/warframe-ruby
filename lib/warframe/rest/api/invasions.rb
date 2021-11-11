@@ -12,7 +12,7 @@ module Warframe
       module Invasions
         include Warframe::REST::Utils
 
-        # Gets the current Invasion data
+        # Gets the current Invasions data.
         # @return [Array<[Warframe::Models::Invasions]>]
         def invasions
           get('/invasions', Warframe::Models::Invasions)
