@@ -21,7 +21,7 @@ RSpec.describe Warframe::Models::Nightwave do
   end
 
   it 'maintains Hash structure of nested attributes' do
-    expect(model.possible_challenges[0]).to be_a Hash
+    expect(model.possible_challenges[0].id).to_not be nil
   end
 
 end
