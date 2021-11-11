@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'warframe/models/global_upgrades'
+require 'warframe/models/global_upgrade'
 require_relative '../utils'
 
 module Warframe
@@ -13,9 +13,9 @@ module Warframe
         include Warframe::REST::Utils
 
         # Gets the current Global Upgrades data.
-        # @return [Array<[Warframe::Models::GlobalUpgrades]>]
+        # @return [Array<[Warframe::Models::GlobalUpgrade]>]
         def global_upgrades
-          get('/globalUpgrades', Warframe::Models::GlobalUpgrades)
+          get('/globalUpgrades', Warframe::Models::GlobalUpgrade)
         end
       end
     end

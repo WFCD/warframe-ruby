@@ -7,7 +7,7 @@ require_relative './attributes/eta'
 module Warframe
   module Models
     # Global Upgrades data model.
-    class GlobalUpgrades < Warframe::Models::Base
+    class GlobalUpgrade < Warframe::Models::Base
       include Warframe::Models::Attributes::Expired
       include Warframe::Models::Attributes::Description
       include Warframe::Models::Attributes::ETA
