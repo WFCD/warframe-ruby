@@ -27,14 +27,24 @@ module Warframe
         uri = URI(path)
         req = Net::HTTP::Get.new(uri)
         req['Accept-Language'] = @client.language
+        return_parsed get_response uri, req
+      end
 
-        resp = Net::HTTP.get(uri) do |http|
+      private
+
+      # @param resp [Net::HTTP.get]
+      # @return [Warframe::Models::Class || [Array.<[Warframe::Models::Class]>]]
+      def return_parsed(resp)
+        parsed = JSON.parse(resp)
+        parsed.is_a?(Array) ? parsed.map { |obj| @klass.new obj } : @klass.new(parsed)
+      end
+
+      def get_response(uri, req)
+        Net::HTTP.get(uri) do |http|
           http['Accept-Language'] = @client.language
           http.use_ssl = true
           http.request req
         end
-
-        @klass.new JSON.parse(resp)
       end
     end
   end
