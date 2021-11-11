@@ -2,6 +2,7 @@
 
 module Warframe
   # @abstract
+  # @private
   # Wraps the {Warframe::REST::Client REST::Client} with necessary variables and methods.
   #
   # This class should < not be used > for interacting with the API.
