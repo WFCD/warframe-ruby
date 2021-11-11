@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    warframe (0.0.2)
+    warframe (0.1.0)
       fast_underscore (~> 0.3.2)
       http (~> 5.0, >= 5.0.4)
       json (~> 2.6, >= 2.6.1)
