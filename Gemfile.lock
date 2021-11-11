@@ -4,6 +4,7 @@ PATH
     warframe (0.0.2)
       fast_underscore (~> 0.3.2)
       http (~> 5.0, >= 5.0.4)
+      json (~> 2.6, >= 2.6.1)
 
 GEM
   remote: https://rubygems.org/
@@ -36,6 +37,7 @@ GEM
     http-form_data (2.3.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
+    json (2.6.1)
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
@@ -86,10 +88,11 @@ GEM
 PLATFORMS
   x64-mingw32
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   activesupport (~> 5.0, >= 5.0.0.1)
-  bundler (~> 2.2, >= 2.2.31)
+  bundler (~> 2.1, >= 2.2.31)
   rake (~> 13.0, >= 13.0.6)
   rspec (~> 3.10)
   rubocop (~> 1.22, >= 1.22.3)

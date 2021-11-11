@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'warframe'
+require 'json'
 
 module SpecUtils
   def load_json_file(file_name)
