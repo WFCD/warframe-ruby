@@ -3,7 +3,7 @@
 module Warframe
   module Models
     # Common Attributes between models.
-    module Common
+    module Attributes
       # Includes the expiry attribute.
       module Expiry
         # When the event will expire.

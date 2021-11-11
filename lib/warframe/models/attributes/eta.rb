@@ -2,7 +2,7 @@
 
 module Warframe
   module Models
-    module Common
+    module Attributes
       # Adds the eta attribute.
       module ETA
         # The estimated time until arrival.

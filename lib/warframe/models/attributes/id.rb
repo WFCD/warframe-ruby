@@ -2,7 +2,7 @@
 
 module Warframe
   module Models
-    module Common
+    module Attributes
       # Unique data response ID.
       module ID
         # The unique ID of the event.

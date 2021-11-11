@@ -4,10 +4,10 @@ require_relative './expiry'
 
 module Warframe
   module Models
-    module Common
+    module Attributes
       # Adds a boolean attribute expired? to see whether or not the even has expired.
       module Expired
-        include Warframe::Models::Common::Expiry
+        include Warframe::Models::Attributes::Expiry
 
         # Whether or not the event has expired.
         # @return [Boolean]

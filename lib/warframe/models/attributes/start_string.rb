@@ -2,7 +2,7 @@
 
 module Warframe
   module Models
-    module Common
+    module Attributes
       # Adds the start_string attribute, for when an event will begin.
       module StartString
         # When this event goes into effect.

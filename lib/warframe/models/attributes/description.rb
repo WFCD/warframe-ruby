@@ -2,7 +2,7 @@
 
 module Warframe
   module Models
-    module Common
+    module Attributes
       # Includes the desc attribute.
       module Description
         # The description of the data requested.

@@ -2,7 +2,7 @@
 
 module Warframe
   module Models
-    module Common
+    module Attributes
       # The types of rewards you can get from this event.
       module RewardTypes
         # The types of rewards you can get from this event.

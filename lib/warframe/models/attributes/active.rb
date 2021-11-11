@@ -2,7 +2,7 @@
 
 module Warframe
   module Models
-    module Common
+    module Attributes
       # Includes the active? attribute.
       module Active
         # Whether or not the event is active.

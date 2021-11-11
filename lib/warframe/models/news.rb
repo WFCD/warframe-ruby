@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
 require_relative './base'
-require_relative './common/translations'
-require_relative './common/eta'
-require_relative './common/id'
+require_relative './attributes/translations'
+require_relative './attributes/eta'
+require_relative './attributes/id'
 
 module Warframe
   module Models
     # Model for the response of {https://api.warframestat.us/pc/news /:platform/news}
     class News < Warframe::Models::Base
-      include Warframe::Models::Common::Translations
-      include Warframe::Models::Common::ETA
-      include Warframe::Models::Common::ID
+      include Warframe::Models::Attributes::Translations
+      include Warframe::Models::Attributes::ETA
+      include Warframe::Models::Attributes::ID
 
       # The date the news was released.
       # @return [String]

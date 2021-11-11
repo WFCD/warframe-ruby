@@ -2,7 +2,7 @@
 
 module Warframe
   module Models
-    module Common
+    module Attributes
       # Includes the translations attribute.
       module Translations
         # The message that can be translated.
