@@ -5,8 +5,13 @@ require 'rspec'
 RSpec.describe Warframe::Models::News do
   let(:json) { load_json_file 'news' }
 
-  it 'can be instantiated with JSON Array input' do
+  it 'can be instantiated with JSON input' do
     expect { Warframe::Models::News.new json }.to_not raise_error
+  end
+
+  it 'can be instantiated from a JSON array' do
+    json_array = Array.new(6, json)
+    expect { Warframe::Models::News.new json_array }.to_not raise_error
   end
 
   let(:news) { Warframe::Models::News.new json }

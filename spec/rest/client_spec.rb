@@ -4,7 +4,7 @@ require 'rspec'
 
 RSpec.describe Warframe::REST::Client do
   let(:default_client) { Warframe::REST::Client.new }
-  let(:ps4_french_client) { Warframe::REST::Client.new platform: 'ps4', language: 'de' }
+  let(:ps4_french_client) { Warframe::REST::Client.new platform: 'ps4', language: 'fr' }
 
   describe '#base_url' do
     it 'sets the provided base url' do
@@ -28,7 +28,7 @@ RSpec.describe Warframe::REST::Client do
     end
 
     it 'can be set to a different language' do
-      expect(ps4_french_client.language).to eq 'de'
+      expect(ps4_french_client.language).to eq 'fr'
     end
   end
 end

@@ -11,7 +11,7 @@ RSpec.describe 'Language Support' do
     end
 
     it 'is different than the english translation' do
-      translations = client.news[0].translations
+      translations = client.news.translations
       english = translations[:en]
       french = translations[client.language]
       expect(translations.size).to_not eq 1
