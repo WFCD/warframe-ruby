@@ -3,7 +3,6 @@
 require 'rspec'
 
 RSpec.describe Warframe::Models::Nightwave do
-
   let(:json) { load_json_file 'nightwave' }
 
   it 'can be instantiated from JSON' do
@@ -23,5 +22,4 @@ RSpec.describe Warframe::Models::Nightwave do
   it 'maintains Hash structure of nested attributes' do
     expect(model.possible_challenges[0].id).to_not be nil
   end
-
 end

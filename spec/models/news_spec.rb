@@ -1,8 +1,8 @@
+# frozen_string_literal: true
 
 require 'rspec'
 
 RSpec.describe Warframe::Models::News do
-
   let(:json) { load_json_file 'news' }
 
   it 'can be instantiated with JSON Array input' do
@@ -18,5 +18,4 @@ RSpec.describe Warframe::Models::News do
   it 'can access boolean that end with ?' do
     expect(news.prime_access?).to_not be nil
   end
-
 end

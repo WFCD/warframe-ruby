@@ -9,7 +9,6 @@ module Warframe
       # API endpoint for getting information from the News route.
       # {https://api.warframestat.us/pc/news Example Response}
       module News
-
         # Gets the current news
         # @return [Array<Warframe::Models::News>]
         def news
