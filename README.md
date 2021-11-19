@@ -66,6 +66,28 @@ To auto-correct styling offenses, run:
 
 > All linting is provided by [RuboCop](https://github.com/rubocop/rubocop).
 
+### Generating New Routes / Models with Thor
+Using Thor allows us to create new routes and models via the command line, making it very simple to add new elements.
+
+For example if we wanted to add, [conclaveChallenges](https://docs.warframestat.us/#tag/Worldstate/paths/~1{platform}~1conclaveChallenges/get) we run:
+
+    $ thor generate conclaveChallenges 
+    
+    >       create  lib/warframe/models/conclave_challenge.rb
+    >       create  lib/warframe/rest/api/conclave_challenges.rb
+    >       conflict  lib/warframe/rest/api.rb
+    > Overwrite C:/Users/ajrom/RubymineProjects/warframe/lib/warframe/rest/api.rb? (enter "h" for help) [Ynaqdh] 
+    
+    $ Y
+    
+    >       force  lib/warframe/rest/api.rb
+
+This creates a blank [model](/lib/warframe/models) for the data and a [route](/lib/warframe/rest/api) with a name spaced method for it, and then adds this method to our [REST::API](/lib/warframe/rest/api). Add attributes to the corresponding model and then run:
+
+    $ rake test
+    
+To ensure the new model is able to be created and accessed correctly, feel free to create more tests in the [spec directory](/spec/models).
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/aj-rom/warframe-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/aj-rom/warframe-ruby/blob/master/CODE_OF_CONDUCT.md).
