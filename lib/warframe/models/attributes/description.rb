@@ -9,6 +9,7 @@ module Warframe
         # @return [String]
         attr_reader :desc
       end
+
       # Includes the description attribute.
       module Description
         # The description of the data requested.
