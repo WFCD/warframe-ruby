@@ -1,10 +1,7 @@
 # frozen_string_literal: true
-
-require_relative 'api/alerts'
-require_relative 'api/global_upgrades'
-require_relative 'api/invasions'
-require_relative 'api/news'
-require_relative 'api/nightwave'
+<% @files.map do |file| -%>
+  <%= "require_relative \"api/#{file}\"" %>
+<% end -%>
 
 module Warframe
   # A REST-ful API service, provided by https://api.warframestat.us
@@ -15,11 +12,9 @@ module Warframe
     #
     # Module names are 'routes' to this API. See {Warframe::REST::API::Alerts Alerts} for example.
     module API
-      include Warframe::REST::API::Alerts
-      include Warframe::REST::API::GlobalUpgrades
-      include Warframe::REST::API::Invasions
-      include Warframe::REST::API::News
-      include Warframe::REST::API::Nightwave
+      <% @constants.map do |x| -%>
+        <%= "include Warframe::REST::API::#{x}" %>
+      <% end -%>
     end
   end
 end

@@ -9,4 +9,4 @@ RuboCop::RakeTask.new(:lint) do |t|
   t.options = %w[-A --extra-details]
 end
 
-task default: :spec
+task default: %i[test lint]

@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+require 'warframe/models/<%= name.singularize.underscore %>'
+require_relative '../utils'
+
+module Warframe
+  module REST
+    # API endpoint for getting information on current <%= name.singularize.camelize %> data.
+    #
+    # {https://api.warframestat.us/pc/<%= name.camelize(:lower) %>> Example Response}
+    module <%= name.camelize %>
+      include Warframe::REST::Utils
+
+      def <%= name.underscore %>
+        get('/<%= name.camelize(:lower) %>', Warframe::Models::<%= name.singularize.camelize %>)
+      end
+    end
+  end
+end
