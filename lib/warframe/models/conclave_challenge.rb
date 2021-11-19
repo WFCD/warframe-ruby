@@ -10,7 +10,7 @@ require_relative 'attributes/active'
 module Warframe
   module Models
     # Model for ConclaveChallenge Data
-    # {https://api.warframestat.us/pc/conclaveChallenges /:platform/conclaveChallenges>}
+    # {https://api.warframestat.us/pc/conclaveChallenges /:platform/conclaveChallenges}
     class ConclaveChallenge < Warframe::Models::Base
       include Warframe::Models::Attributes::Expiration
       include Warframe::Models::Attributes::ETA
