@@ -31,7 +31,6 @@ Gem::Specification.new do |spec|
     end
   end
 
-
   # Dependencies
   spec.required_ruby_version = '>= 2.5.0'
   spec.add_dependency 'fast_underscore', '~> 0.3.2'
@@ -42,5 +41,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
   spec.add_development_dependency 'rspec', '~> 3.10'
   spec.add_development_dependency 'rubocop', '~> 1.22', '>= 1.22.3'
+  spec.add_development_dependency 'thor', '~> 0.19.1'
   spec.add_development_dependency 'yard', '~> 0.9.26'
+  spec.metadata = {
+    'rubygems_mfa_required' => 'true'
+  }
 end
