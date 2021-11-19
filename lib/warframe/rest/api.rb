@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'api/nightwave'
-require_relative 'api/news'
 require_relative 'api/alerts'
-require_relative 'api/invasions'
 require_relative 'api/global_upgrades'
+require_relative 'api/invasions'
+require_relative 'api/news'
+require_relative 'api/nightwave'
 
 module Warframe
   # A REST-ful API service, provided by https://api.warframestat.us
