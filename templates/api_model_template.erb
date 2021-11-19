@@ -6,7 +6,7 @@ module Warframe
   module Models
     # Model for <%= name.singularize.camelize %> Data {https://docs.warframestat.us/DOCUMENTATION_PATH /:platform/<%= name.camelize(:lower) %>>}
     # TODO: Replace above documentation path with correct one.
-    class <%= name.singularize.camelize %>
+    class <%= name.singularize.camelize %> < Warframe::Models::Base
       # TODO: Add attributes
     end
   end
