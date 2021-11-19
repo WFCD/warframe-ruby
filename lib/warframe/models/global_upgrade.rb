@@ -9,7 +9,7 @@ module Warframe
     # Global Upgrades data model.
     class GlobalUpgrade < Warframe::Models::Base
       include Warframe::Models::Attributes::Expired
-      include Warframe::Models::Attributes::Description
+      include Warframe::Models::Attributes::Desc
       include Warframe::Models::Attributes::ETA
 
       # The start of the global upgrade.
