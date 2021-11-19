@@ -2,4 +2,6 @@ AllCops:
   SuggestExtensions: false
   NewCops: enable
   TargetRubyVersion: 2.5
-  DisplayCopNames: false
+  DisplayCopNames: true
+Style/OpenStructUse:
+    Enabled: false
