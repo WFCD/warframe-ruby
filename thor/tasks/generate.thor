@@ -2,43 +2,35 @@
 
 require 'active_support/core_ext/string/inflections'
 require 'thor'
-require 'warframe'
-require 'rubocop/rake_task'
+require_relative '../utils'
 
 # @private
 class Generate < Thor::Group
   include Thor::RakeCompat
   include Thor::Actions
+  include Utils
 
   argument :name
+  desc('Name of the API endpoint.')
   def self.source_root
-    File.dirname(__FILE__)
+    File.expand_path('templates', __dir__)
   end
 
   # Create a model file Warframe::Models::ModelName
   def create_model_file
-    template('templates/api_model_template.erb', "./lib/warframe/models/#{get_class_file_name name.singularize}")
+    template(template_dir('api_model'), "./lib/warframe/models/#{get_class_file_name name.singularize}")
   end
 
   # Creates a route module Warframe::REST::API::ModuleName
   def create_route_file
-    template('templates/api_route_template.erb', "./lib/warframe/rest/api/#{get_class_file_name name}")
+    template(template_dir('api_route'), "./lib/warframe/rest/api/#{get_class_file_name name}")
   end
 
   # Adds the newly created module to the API Module
   def modify_api_module
     @files = Dir.glob("#{api_directory}/api/*.rb").sort.map { |file| File.basename(file).gsub('.rb', '') }
-    # @files.push name.underscore
     @constants = @files.map { |file| file.gsub('.rb', '').camelize }
-    template('templates/api_module_template.erb', './lib/warframe/rest/api.rb')
-  end
-
-  def lint
-    RuboCop::RakeTask.new(:lint) do |t|
-      t.options = %w[-A --extra-details]
-    end
-
-    Rake::Task['lint'].invoke
+    template(template_dir('api_module'), './lib/warframe/rest/api.rb')
   end
 
   private

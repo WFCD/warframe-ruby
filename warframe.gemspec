@@ -36,7 +36,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'json', '~> 2.6', '>= 2.6.1'
   spec.add_development_dependency 'activesupport', '~> 5.0', '>= 5.0.0.1'
   spec.add_development_dependency 'bundler', '~> 2.1', '>= 2.2.31'
-  spec.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
   spec.add_development_dependency 'rspec', '~> 3.10'
   spec.add_development_dependency 'rubocop', '~> 1.22', '>= 1.22.3'
   spec.add_development_dependency 'thor', '~> 0.19.1'

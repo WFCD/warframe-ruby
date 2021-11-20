@@ -1,6 +1,7 @@
 # frozen_string_literal: true
+
 <% @files.map do |file| -%>
-  <%= "require_relative \"api/#{file}\"" %>
+<%= "require_relative 'api/#{file}'" %>
 <% end -%>
 
 module Warframe
@@ -12,9 +13,9 @@ module Warframe
     #
     # Module names are 'routes' to this API. See {Warframe::REST::API::Alerts Alerts} for example.
     module API
-      <% @constants.map do |x| -%>
-        <%= "include Warframe::REST::API::#{x}" %>
-      <% end -%>
-    end
+  <% @constants.map do |x| -%>
+    <%= "include Warframe::REST::API::#{x}" %>
+  <% end -%>
+  end
   end
 end
