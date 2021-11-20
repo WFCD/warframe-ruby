@@ -8,6 +8,7 @@ require_relative 'api/news'
 require_relative 'api/nightwave'
 require_relative 'api/sortie'
 require_relative 'api/steel_path'
+require_relative 'api/syndicate_missions'
 
 module Warframe
   # A REST-ful API service, provided by https://api.warframestat.us
@@ -26,6 +27,7 @@ module Warframe
       include Warframe::REST::API::Nightwave
       include Warframe::REST::API::Sortie
       include Warframe::REST::API::SteelPath
+      include Warframe::REST::API::SyndicateMissions
     end
   end
 end
