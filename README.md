@@ -55,14 +55,14 @@ After checking out the repo, run `bundle install` to install required dependenci
 ### Testing
 To check if your changes are passing tests, run:
 
-    $ rake test
+    $ thor test:rspec
 
 > Testing framework provided by [RSpec](https://rspec.info/).
 
 ### Linting
 To auto-correct styling offenses, run: 
 
-    $ rake lint
+    $ thor style:fix
 
 > All linting is provided by [RuboCop](https://github.com/rubocop/rubocop).
 
