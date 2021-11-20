@@ -12,6 +12,8 @@ module Warframe
       module <%= name.camelize %>
         include Warframe::REST::Utils
 
+        # Gets the current <%= name.camelize(:lower) %> Data.
+        # @return TODO: [Warframe::Models::<%= name.singularize.camelize %>] OR [Array<Warframe::Models::<%= name.singularize.camelize %>>]
         def <%= name.underscore %>
           get('/<%= name.camelize(:lower) %>', Warframe::Models::<%= name.singularize.camelize %>)
         end
