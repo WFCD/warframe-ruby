@@ -12,6 +12,8 @@ module Warframe
       module ConclaveChallenges
         include Warframe::REST::Utils
 
+        # Gets the current conclave challenges.
+        # @return [Array<Warframe::Models::ConclaveChallenge>]
         def conclave_challenges
           get('/conclaveChallenges', Warframe::Models::ConclaveChallenge)
         end

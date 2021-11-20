@@ -12,6 +12,8 @@ module Warframe
       module Sortie
         include Warframe::REST::Utils
 
+        # Gets the current sortie missions.
+        # @return [Array<Warframe::Models::Sortie>]
         def sortie
           get('/sortie', Warframe::Models::Sortie)
         end

@@ -7,6 +7,7 @@ require_relative 'api/invasions'
 require_relative 'api/news'
 require_relative 'api/nightwave'
 require_relative 'api/sortie'
+require_relative 'api/steel_path'
 
 module Warframe
   # A REST-ful API service, provided by https://api.warframestat.us
@@ -24,6 +25,7 @@ module Warframe
       include Warframe::REST::API::News
       include Warframe::REST::API::Nightwave
       include Warframe::REST::API::Sortie
+      include Warframe::REST::API::SteelPath
     end
   end
 end

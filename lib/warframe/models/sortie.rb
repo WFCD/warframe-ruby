@@ -24,7 +24,7 @@ module Warframe
       attr_reader :faction
 
       # Modifiers active for this challenge.
-      # @return [Array]
+      # @return [Array<OpenStruct>]
       attr_reader :variants
 
       # The reward pool which this is pulling from.
