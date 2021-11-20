@@ -13,7 +13,7 @@ module Warframe
         include Warframe::REST::Utils
 
         # Steel Path data
-        # @return [Array<Warframe::Models::SteelPath>]
+        # @return [Warframe::Models::SteelPath]
         def steel_path
           get('/steelPath', Warframe::Models::SteelPath)
         end
