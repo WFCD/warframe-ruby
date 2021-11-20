@@ -2,7 +2,7 @@
 
 require_relative './base'
 require_relative 'attributes/eta'
-require_relative 'attributes/id '
+require_relative 'attributes/id'
 require_relative 'attributes/active'
 require_relative 'attributes/start_string'
 
