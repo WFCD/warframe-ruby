@@ -1,36 +1,48 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require 'active_support/core_ext/string/inflections'
 
 RSpec.describe Warframe::REST::API do
-  let(:default_client) { Warframe::REST::Client.new }
+  let(:client) { Warframe::REST::Client.new }
 
-  routes = Warframe::REST::API.constants
+  context '#alerts' do
+    it 'does not raise error on call' do
+      expect { client.alerts }.to_not raise_error
+    end
 
-  context 'Routes' do
-    routes.each do |route|
-      method = route.to_s.underscore.downcase
-      describe "##{method}" do
-        it 'responds to method call' do
-          expect(default_client.send(method))
-        end
-
-        it 'properly loads data' do
-          sent = default_client.send(method)
-          model_instance = Warframe::Models.const_get(route.to_s.singularize)
-          if sent.is_a? Array
-            expect(sent.count).to be_positive
-            expect(sent[0].id).to_not be nil
-
-            sent.each do |obj|
-              expect(obj).to be_a model_instance
-            end
-          else
-            expect(sent).to be_a model_instance
-          end
-        end
-      end
+    it 'properly loads data into model' do
+      expect(client.alerts).to be_a Warframe::Models::Alert
     end
   end
+
+  context '#cambion_drift' do
+    it 'does not raise error on call' do
+      expect { client.cambion_drift }.to_not raise_error
+    end
+
+    it 'properly loads data into model' do
+      expect(client.cambion_drift).to be_a Warframe::Models::CambionDrift
+    end
+  end
+
+  context '#cetus' do
+    it 'does not raise error on call' do
+      expect { client.cetus }.to_not raise_error
+    end
+
+    it 'properly loads data into model' do
+      expect(client.cetus).to be_a Warframe::Models::Cetus
+    end
+  end
+
+  context '#nightwave' do
+    it 'does not raise error on call' do
+      expect { client.nightwave }.to_not raise_error
+    end
+
+    it 'properly loads data into model' do
+      expect(client.nightwave).to be_a Warframe::Models::Nightwave
+    end
+  end
+
 end

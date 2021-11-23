@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-require 'warframe'
 require 'json'
+require 'rspec'
+require 'warframe'
 
 module SpecUtils
   def load_json_file(file_name)
@@ -21,4 +22,10 @@ RSpec.configure do |config|
   end
 
   config.include SpecUtils
+end
+
+RSpec::Matchers.define :be_a_boolean do
+  match do |real|
+    expect(real).to be(true).or be(false)
+  end
 end
