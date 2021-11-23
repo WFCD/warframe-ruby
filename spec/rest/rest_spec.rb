@@ -44,5 +44,4 @@ RSpec.describe Warframe::REST::API do
       expect(client.nightwave).to be_a Warframe::Models::Nightwave
     end
   end
-
 end

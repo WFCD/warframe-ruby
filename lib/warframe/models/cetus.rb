@@ -35,7 +35,6 @@ module Warframe
       # A short string of the time left until state change.
       # @return [String]
       attr_reader :short_string
-
     end
   end
 end
