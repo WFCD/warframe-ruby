@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'api/alerts'
+require_relative 'api/cambion_drift'
 require_relative 'api/cetus'
 require_relative 'api/conclave_challenges'
 require_relative 'api/global_upgrades'
@@ -21,6 +22,7 @@ module Warframe
     # Module names are 'routes' to this API. See {Warframe::REST::API::Alerts Alerts} for example.
     module API
       include Warframe::REST::API::Alerts
+      include Warframe::REST::API::CambionDrift
       include Warframe::REST::API::Cetus
       include Warframe::REST::API::ConclaveChallenges
       include Warframe::REST::API::GlobalUpgrades

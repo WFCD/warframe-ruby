@@ -15,7 +15,7 @@ module Warframe
         # Gets the current cetusCycle Data.
         # @return [Warframe::Models::Cetus]
         def cetus
-          get('/cetusCycle', Warframe::Models::CetusCycle)
+          get('/cetusCycle', Warframe::Models::Cetus)
         end
       end
     end

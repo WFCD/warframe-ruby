@@ -15,6 +15,16 @@ RSpec.describe Warframe::REST::API do
     end
   end
 
+  context '#cambion_drift' do
+    it 'does not raise error on call' do
+      expect { client.cambion_drift }.to_not raise_error
+    end
+
+    it 'properly loads data into model' do
+      expect(client.cambion_drift).to be_a Warframe::Models::CambionDrift
+    end
+  end
+
   context '#cetus' do
     it 'does not raise error on call' do
       expect { client.cetus }.to_not raise_error
