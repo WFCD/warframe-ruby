@@ -84,7 +84,7 @@ For example if we wanted to add, [conclaveChallenges](https://docs.warframestat.
 
 This creates a blank [model](/lib/warframe/models) for the data and a [route](/lib/warframe/rest/api) with a name spaced method for it, and then adds this method to our [REST::API](/lib/warframe/rest/api). Add attributes to the corresponding model and then run:
 
-    $ rake test
+    $ thor rspec:test
     
 To ensure the new model is able to be created and accessed correctly, feel free to create more tests in the [spec directory](/spec/models).
 
