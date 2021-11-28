@@ -11,7 +11,7 @@ module Warframe
     # Model for Sortie Data {https://api.warframestat.us/pc/sortie> /:platform/sortie}
     class Sortie < Warframe::Models::Base
       include Warframe::Models::Attributes::ID
-      include Warframe::Models::Attributes::Activation
+      include Warframe::Models::Attributes::ActiveBoth
       include Warframe::Models::Attributes::Expiration
       include Warframe::Models::Attributes::ETA
 
