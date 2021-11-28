@@ -1,0 +1,17 @@
+{
+  "id": "61a105ae3e528e1ce7f0546f",
+  "expiry": "2021-12-03T16:05:02.027Z",
+  "activation": "2021-11-26T16:05:02.027Z",
+  "amount": 10,
+  "mode": "Any Mode",
+  "category": "week",
+  "eta": "5d 13h 12m 18s",
+  "expired": false,
+  "daily": false,
+  "rootChallenge": false,
+  "endString": "5d 13h 12m 18s",
+  "description": "Complete 10 Daily Challenges",
+  "title": "Conditioning",
+  "standing": 0,
+  "asString": "Complete 10 Daily Challenges on Any Mode 10 times in a week"
+}

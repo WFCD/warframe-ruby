@@ -1,0 +1,171 @@
+{
+  "id": "1638075880086CetusSyndicate",
+  "activation": "2021-11-28T02:34:41.212Z",
+  "startString": "-19m 0s",
+  "expiry": "2021-11-28T05:04:40.086Z",
+  "active": true,
+  "syndicate": "Ostrons",
+  "nodes": [
+
+  ],
+  "jobs": [
+    {
+      "id": "ReclamationBountyCache1638075880086",
+      "rewardPool": [
+        "Pressure Point",
+        "100X Cryotic",
+        "1,500 Credits Cache",
+        "50 Endo",
+        "15X Grokdrul",
+        "Gara Chassis Blueprint",
+        "Hornet Strike",
+        "Stretch",
+        "2X Morphics"
+      ],
+      "type": "Find the Hidden Artifact",
+      "enemyLevels": [
+        5,
+        15
+      ],
+      "standingStages": [
+        340,
+        340,
+        340
+      ],
+      "minMR": 0
+    },
+    {
+      "id": "AttritionBountyLib1638075880086",
+      "rewardPool": [
+        "Energy Inversion",
+        "200X Cryotic",
+        "2,500 Credits Cache",
+        "100 Endo",
+        "Gara Systems Blueprint",
+        "Speed Trigger",
+        "Reaping Spiral",
+        "Aya",
+        "2X Neural Sensors"
+      ],
+      "type": "Weaken the Grineer Foothold",
+      "enemyLevels": [
+        10,
+        30
+      ],
+      "standingStages": [
+        670,
+        670,
+        670
+      ],
+      "minMR": 1
+    },
+    {
+      "id": "AssassinateBountyCap1638075880086",
+      "rewardPool": [
+        "Vigilante Armaments",
+        "Vazarin Lens",
+        "Unairu Lens",
+        "200 Endo",
+        "Gara Neuroptics Blueprint",
+        "Gladiator Might",
+        "Revenant Systems Blueprint",
+        "Aya",
+        "Augur Seeker"
+      ],
+      "type": "Capture the New Grineer Commander",
+      "enemyLevels": [
+        20,
+        40
+      ],
+      "standingStages": [
+        610,
+        610,
+        610,
+        900
+      ],
+      "minMR": 2
+    },
+    {
+      "id": "ReclamationBountyCap1638075880086",
+      "rewardPool": [
+        "Vigilante Vigor",
+        "Zenurik Lens",
+        "Vazarin Lens",
+        "300 Endo",
+        "Cetus Wisp",
+        "Gladiator Resolve",
+        "Revenant Chassis Blueprint",
+        "Aya",
+        "Augur Secrets"
+      ],
+      "type": "Capture the Grineer Agent",
+      "enemyLevels": [
+        30,
+        50
+      ],
+      "standingStages": [
+        580,
+        580,
+        580,
+        580,
+        1140
+      ],
+      "minMR": 3
+    },
+    {
+      "id": "RescueBountyResc1638075880086",
+      "rewardPool": [
+        "5X Breath Of The Eidolon",
+        "400 Endo",
+        "2X Cetus Wisp",
+        "300X Kuva",
+        "Aya",
+        "Furax Wraith Right Gauntlet",
+        "Swooping Falcon",
+        "Eidolon Lens Blueprint",
+        "Revenant Neuroptics Blueprint"
+      ],
+      "type": "Search and Rescue",
+      "enemyLevels": [
+        40,
+        60
+      ],
+      "standingStages": [
+        690,
+        690,
+        690,
+        690,
+        1360
+      ],
+      "minMR": 5
+    },
+    {
+      "id": "ReclamationBountyTheft1638075880086",
+      "rewardPool": [
+        "5X Breath Of The Eidolon",
+        "400 Endo",
+        "2X Cetus Wisp",
+        "300X Kuva",
+        "Aya",
+        "Furax Wraith Right Gauntlet",
+        "Swooping Falcon",
+        "Eidolon Lens Blueprint",
+        "Revenant Neuroptics Blueprint"
+      ],
+      "type": "Reclaim the Stolen Artifact",
+      "enemyLevels": [
+        100,
+        100
+      ],
+      "standingStages": [
+        840,
+        840,
+        840,
+        840,
+        1660
+      ],
+      "minMR": 10
+    }
+  ],
+  "eta": "2h 10m 58s"
+}
