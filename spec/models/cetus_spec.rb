@@ -10,11 +10,6 @@ RSpec.describe Warframe::Models::Cetus do
     expect { cetus }.to_not raise_error
   end
 
-  it 'can be instantiated from JSON Array' do
-    json_arr = Array.new(6, json)
-    expect { Warframe::Models::Cetus.new json_arr }.to_not raise_error
-  end
-
   it 'can read the newly created objects attributes' do
     expect(cetus.day?).to be_a_boolean
   end
