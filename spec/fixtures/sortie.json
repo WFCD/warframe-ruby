@@ -1,0 +1,32 @@
+{
+  "id": "61a2608d7b90f7c7e869bb04",
+  "activation": "2021-11-27T17:00:00.000Z",
+  "startString": "-9h 52m 43s",
+  "expiry": "2021-11-28T17:00:00.000Z",
+  "active": true,
+  "rewardPool": "Sortie Rewards",
+  "variants": [
+    {
+      "missionType": "Defense",
+      "modifier": "Enhanced Enemy Shields",
+      "modifierDescription": "Enemies have vastly Improved Shields. Magnetic Procs are advised.",
+      "node": "Themisto (Jupiter)"
+    },
+    {
+      "missionType": "Spy",
+      "modifier": "Environmental Hazard: Electromagnetic Anomalies",
+      "modifierDescription": "Reduced Gravity. Blue blobs that deal magnetic procs placed through out the tileset.",
+      "node": "Fossa (Venus)"
+    },
+    {
+      "missionType": "Mobile Defense",
+      "modifier": "Enemy Physical Enhancement: Impact",
+      "modifierDescription": "Enemies can deal enhanced impact damage. Finishing damage is not resisted.",
+      "node": "Valac (Europa)"
+    }
+  ],
+  "boss": "Alad V",
+  "faction": "Corpus",
+  "expired": false,
+  "eta": "14h 7m 16s"
+}

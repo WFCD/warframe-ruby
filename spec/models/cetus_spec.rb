@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'rspec'
-
 RSpec.describe Warframe::Models::Cetus do
   let(:json) { load_json_file 'cetus' }
   let(:cetus) { Warframe::Models::Cetus.new json }

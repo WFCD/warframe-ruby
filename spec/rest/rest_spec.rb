@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'rspec'
-
 RSpec.describe Warframe::REST::API do
   let(:client) { Warframe::REST::Client.new }
 

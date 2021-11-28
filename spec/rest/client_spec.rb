@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'rspec'
-
 RSpec.describe Warframe::REST::Client do
   let(:default_client) { Warframe::REST::Client.new }
   let(:ps4_french_client) { Warframe::REST::Client.new platform: 'ps4', language: 'fr' }

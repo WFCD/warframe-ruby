@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'rspec'
-
 RSpec.describe Warframe::Models::Alert do
   let(:json) { load_json_file 'cambion_drift' }
   let(:drift) { Warframe::Models::CambionDrift.new json }
