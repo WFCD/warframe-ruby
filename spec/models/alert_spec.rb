@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'rspec'
-
 RSpec.describe Warframe::Models::Alert do
   let(:json) { load_json_file 'alert' }
   let(:alert) { Warframe::Models::Alert.new json }
