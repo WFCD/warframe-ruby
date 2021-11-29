@@ -9,7 +9,7 @@ RSpec.describe Warframe::REST::API do
     end
 
     it 'properly loads data into model' do
-      expect(client.alerts).to be_a Warframe::Models::Alert
+      expect(client.alerts).to be_a(Array || Warframe::Models::Alert)
     end
   end
 
