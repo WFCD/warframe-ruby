@@ -8,7 +8,7 @@ module Warframe
     module API
       # API endpoint for getting information on current SteelPath data.
       #
-      # {https://api.warframestat.us/pc/steelPath> Example Response}
+      # {https://api.warframestat.us/pc/steelPath Example Response}
       module SteelPath
         include Warframe::REST::Utils
 

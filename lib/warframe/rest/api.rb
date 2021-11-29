@@ -13,7 +13,7 @@ require_relative 'api/steel_path'
 require_relative 'api/syndicate_missions'
 
 module Warframe
-  # A REST-ful API service, provided by https://api.warframestat.us
+  # A REST-ful API service, provided by https://api.warframestat.us.
   module REST
     # The API Router for getting live data.
     #

@@ -7,8 +7,8 @@ require_relative 'attributes/expiry'
 
 module Warframe
   module Models
-    # Model for CetusCycle Data {https://api.warframestat.us/pc/cetusCycle> /:platform/cetusCycle}
-    # TODO: Replace above documentation path with correct one.
+    # Cetus data model.
+    # {https://api.warframestat.us/pc/cetusCycle /:platform/cetusCycle}
     class Cetus < Warframe::Models::Base
       include Warframe::Models::Attributes::ID
       include Warframe::Models::Attributes::Activation

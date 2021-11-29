@@ -7,7 +7,8 @@ require_relative 'attributes/active'
 
 module Warframe
   module Models
-    # Model for Cambion Drift Data {https://api.warframestat.us/pc/cambionCycle> /:platform/cambionCycle}
+    # Cambion Drift data model.
+    # {https://api.warframestat.us/pc/cambionCycle /:platform/cambionCycle}
     class CambionDrift < Warframe::Models::Base
       include Warframe::Models::Attributes::ID
       include Warframe::Models::Attributes::Activation

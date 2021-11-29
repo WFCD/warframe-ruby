@@ -8,7 +8,8 @@ require_relative 'attributes/eta'
 
 module Warframe
   module Models
-    # Model for Sortie Data {https://api.warframestat.us/pc/sortie> /:platform/sortie}
+    # Sortie data model.
+    # {https://api.warframestat.us/pc/sortie /:platform/sortie}
     class Sortie < Warframe::Models::Base
       include Warframe::Models::Attributes::ID
       include Warframe::Models::Attributes::ActiveBoth

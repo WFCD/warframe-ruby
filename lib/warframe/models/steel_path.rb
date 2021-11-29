@@ -4,7 +4,8 @@ require_relative './base'
 
 module Warframe
   module Models
-    # Model for SteelPath Data {https://api.warframestat.us/pc/steelPath> /:platform/steelPath}
+    # SteelPath data model.
+    # {https://api.warframestat.us/pc/steelPath /:platform/steelPath}
     class SteelPath < Warframe::Models::Base
       include Warframe::Models::Attributes::Active
       include Warframe::Models::Attributes::Expiry

@@ -8,7 +8,8 @@ require_relative './attributes/reward_types'
 
 module Warframe
   module Models
-    # Model for the response of {https://api.warframestat.us/pc/nightwave /:platform/nightwave}
+    # Nightwave data model.
+    # {https://api.warframestat.us/pc/nightwave /:platform/nightwave}
     class Nightwave < Warframe::Models::Base
       include Warframe::Models::Attributes::Activation
       include Warframe::Models::Attributes::ID

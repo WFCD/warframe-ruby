@@ -6,7 +6,7 @@ require_relative '../utils'
 module Warframe
   module REST
     module API
-      # API endpoint for getting information on current CambionDrift data.
+      # API endpoint for getting information on current Cambion Drift data.
       #
       # {https://api.warframestat.us/pc/cambionDrift Example Response}
       module CambionDrift
