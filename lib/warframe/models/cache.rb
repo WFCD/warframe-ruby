@@ -4,15 +4,15 @@ module Warframe
   module Models
     # @private
     class Cache
-      @@CACHE = {}
+      @@cache = {}
 
       def self.new_entry(path, content = nil, seconds = 300)
         expiration = Time.now.to_i + seconds
-        @@CACHE = { path: path, expiration: expiration, content: content }
+        @@cache = { path: path, expiration: expiration, content: content }
       end
 
       def self.cache
-        @@CACHE
+        @@cache
       end
 
       def self.expired?
