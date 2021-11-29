@@ -2,9 +2,9 @@
 
 RSpec.describe 'Warframe::REST:Client Cache' do
   let(:client) { Warframe::REST::Client.new }
+  let(:old) { Warframe::Models::Nightwave.new(load_json_file('nightwave')) }
 
-  it 'instantiates with expiration time and empty all' do
-    old = Warframe::Models::Nightwave.new(load_json_file('nightwave'))
+  it 'correctly caches object models' do
     # Create initial MOCK entry data with 1 second expiry
     Warframe::Models::Nightwave.new_entry('/nightwave', old, 1)
     expect(Warframe::Models::Nightwave.cache_content).to be_a Warframe::Models::Nightwave
