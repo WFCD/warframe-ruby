@@ -6,9 +6,9 @@ require_relative '../utils'
 module Warframe
   module REST
     module API
-      # API endpoint for getting information on current ConclaveChallenge data.
+      # API endpoint for getting information on current Conclave Challenge data.
       #
-      # {https://api.warframestat.us/pc/conclaveChallenges> Example Response}
+      # {https://api.warframestat.us/pc/conclaveChallenges Example Response}
       module ConclaveChallenges
         include Warframe::REST::Utils
 

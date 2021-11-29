@@ -8,7 +8,7 @@ module Warframe
     module API
       # API endpoint for getting information on current Sortie data.
       #
-      # {https://api.warframestat.us/pc/sortie> Example Response}
+      # {https://api.warframestat.us/pc/sortie Example Response}
       module Sortie
         include Warframe::REST::Utils
 

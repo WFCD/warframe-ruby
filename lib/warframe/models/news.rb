@@ -7,7 +7,8 @@ require_relative './attributes/id'
 
 module Warframe
   module Models
-    # Model for the response of {https://api.warframestat.us/pc/news /:platform/news}
+    # News data model.
+    # {https://api.warframestat.us/pc/news /:platform/news}
     class News < Warframe::Models::Base
       include Warframe::Models::Attributes::Translations
       include Warframe::Models::Attributes::ETA

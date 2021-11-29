@@ -12,6 +12,7 @@ require_relative './attributes/start_string'
 module Warframe
   module Models
     # Invasion data model.
+    # {https://api.warframestat.us/pc/invasions /:platform/invasions}
     class Invasion < Warframe::Models::Base
       include Warframe::Models::Attributes::ID
       include Warframe::Models::Attributes::Activation

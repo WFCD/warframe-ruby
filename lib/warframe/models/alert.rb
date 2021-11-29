@@ -9,7 +9,8 @@ require_relative './attributes/start_string'
 
 module Warframe
   module Models
-    # Model for World State data {https://api.warframestat.hub/pc/alerts /:platform/alerts}
+    # Model for Alert data.
+    # {https://api.warframestat.hub/pc/alerts /:platform/alerts}
     class Alert < Warframe::Models::Base
       include Warframe::Models::Attributes::Expired
       include Warframe::Models::Attributes::Active

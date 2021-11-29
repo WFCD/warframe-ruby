@@ -8,7 +8,8 @@ require_relative 'attributes/start_string'
 
 module Warframe
   module Models
-    # Model for SyndicateMission Data {https://api.warframestat.us/pc/syndicateMissions> /:platform/syndicateMissions}
+    # SyndicateMission data model.
+    # {https://api.warframestat.us/pc/syndicateMissions /:platform/syndicateMissions}
     class SyndicateMission < Warframe::Models::Base
       include Warframe::Models::Attributes::ETA
       include Warframe::Models::Attributes::ID
