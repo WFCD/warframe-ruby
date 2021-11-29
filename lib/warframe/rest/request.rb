@@ -21,6 +21,7 @@ module Warframe
       # @return [Warframe:REST:Request]
       def initialize(client, path, klass)
         @client = client
+        @route = path
         @path = client.base_url + path + "?language=#{@client.language}"
         @klass = klass
       end
@@ -29,9 +30,14 @@ module Warframe
       # Will either return the Model, or collection of Models.
       # @return [Warframe::Models, Array<[Warframe::Models]>]
       def send
+        return @klass.cache_content if @klass.cache_is_readable? @route
+
         uri = URI(path)
         req = Net::HTTP::Get.new(uri)
-        return_parsed get_response uri, req
+        resp = get_response uri, req
+        parsed = return_parsed resp
+        @klass.new_entry(@route, parsed)
+        parsed
       end
 
       private
@@ -41,6 +47,10 @@ module Warframe
       # @return [Warframe::Models, Array<[Warframe::Models]>]
       def return_parsed(resp)
         parsed = JSON.parse(resp)
+
+        # Return Empty array if no data found.
+        return [] if parsed.is_a?(Array) && parsed.empty?
+
         @klass.new parsed
       end
 
