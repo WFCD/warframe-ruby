@@ -1,9 +1,9 @@
 # warframe-ruby
+[![Supported by Warframe Community Developers](https://warframestat.us/wfcd.png)](https://github.com/WFCD/banner/blob/main/PROJECTS.md "Supported by Warframe Community Developers")
 [![Ruby Gem Version](https://badgen.net/rubygems/v/warframe)](https://rubygems.org/gems/warframe)
 [![Downloads](https://badgen.net/rubygems/dt/warframe)](https://rubygems.org/gems/warframe)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 [![Platform](https://badgen.net/rubygems/p/warframe)](https://www.ruby-lang.org/en/)
-[![Supported by Warframe Community Developers](https://warframestat.us/wfcd.png)](https://github.com/WFCD/banner/blob/main/PROJECTS.md "Supported by Warframe Community Developers")
 
 
 A Ruby client for [Warframe Stat](https://warframestat.us) bringing you live modeled data from their API.
@@ -52,7 +52,11 @@ Documentation is currently provided by [rubydoc.info](https://rubydoc.info), che
 ## Development
 
 ### Dependency Management
-After checking out the repo, run `bundle install` to install required dependencies. 
+After checking out the repo, run: 
+
+    $ bundle install
+    
+> This will install all required dependencies for this gem to run.
 
 ### Testing
 To check if your changes are passing tests, run:
