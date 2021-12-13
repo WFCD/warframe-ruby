@@ -76,7 +76,7 @@ For example if we wanted to add, [conclaveChallenges](https://docs.warframestat.
     >       create  lib/warframe/models/conclave_challenge.rb
     >       create  lib/warframe/rest/api/conclave_challenges.rb
     >       conflict  lib/warframe/rest/api.rb
-    > Overwrite C:/Users/ajrom/RubymineProjects/warframe/lib/warframe/rest/api.rb? (enter "h" for help) [Ynaqdh] 
+    > Overwrite ~/warframe/lib/warframe/rest/api.rb? (enter "h" for help) [Ynaqdh] 
     
     $ Y
     
