@@ -3,6 +3,8 @@
 [![Downloads](https://badgen.net/rubygems/dt/warframe)](https://rubygems.org/gems/warframe)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 [![Platform](https://badgen.net/rubygems/p/warframe)](https://www.ruby-lang.org/en/)
+[![Supported by Warframe Community Developers](https://warframestat.us/wfcd.png)](https://github.com/WFCD/banner/blob/main/PROJECTS.md "Supported by Warframe Community Developers")
+
 
 A Ruby client for [Warframe Stat](https://warframestat.us) bringing you live modeled data from their API.
 
