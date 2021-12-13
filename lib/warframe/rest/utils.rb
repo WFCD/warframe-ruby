@@ -12,7 +12,11 @@ module Warframe
       # @param path [String]
       # @param klass [Warframe::Models]
       def get(path, klass)
-        Warframe::REST::Request.new(@client || self, path, klass).send
+        inst = @client || self
+        return inst.get_from_cache(path) if inst.find_in_cache(path)
+
+        result = Warframe::REST::Request.new(inst, path, klass).send
+        inst.add_to_cache(path, result)
       end
     end
   end
