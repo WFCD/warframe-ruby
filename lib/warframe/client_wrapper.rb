@@ -26,8 +26,8 @@ module Warframe
     # This class is ABSTRACT and should not be instantiated outside of {Warframe::REST::Client REST::Client}.
     # @return [Warframe::ClientWrapper]
     def initialize(options = {})
+      super()
       DEFAULT_OPTIONS.merge(options).each { |k, v| instance_variable_set "@#{k}", v }
-
       yield self if block_given?
     end
 
@@ -35,6 +35,5 @@ module Warframe
     def base_url
       BASE_URL + platform
     end
-
   end
 end

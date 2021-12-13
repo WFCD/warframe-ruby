@@ -4,38 +4,34 @@ module Warframe
   # @private
   class Cache
     # Expiration time in seconds
-    EXPIRATION_TIME = 5
-    attr_accessor :data
+    EXPIRATION_TIME = 5 * 60
+    attr_accessor :cache
 
     def initialize
-      @data = {}
+      @cache = {}
+    end
+
+    def get_from_cache(key)
+      cache[key][:result]
     end
 
     def find_in_cache(key)
-      if exist?(key) && !expired(key)
-        @data[key]
-      else
-        nil
-      end
-      # if cache[k].exist? && cache[k] isnt expired return cache[k]
-      # else return nil
+      cache[key][:result] if exist?(key) && !expired?(key)
     end
 
-    def add_to_cache(key, val)
-      @data[key] = { time: Time.now, result: val }
+    def add_to_cache(key, val, time = EXPIRATION_TIME)
+      cache[key] = { time: Time.now.to_i + time, result: val }
       val
     end
 
     private
 
     def exist?(key)
-      !!@data[key].nil?
+      !cache[key].nil?
     end
 
     def expired?(key)
-      Time.now - data[key][:time] > EXPIRATION_TIME
+      cache[key][:time] - Time.now.to_i <= 0
     end
-
-
   end
 end
