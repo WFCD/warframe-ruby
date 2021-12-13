@@ -1,16 +1,20 @@
 # frozen_string_literal: true
 
+require_relative 'cache'
+
 module Warframe
   # @abstract
   # @private
   # Wraps the {Warframe::REST::Client REST::Client} with necessary variables and methods.
   #
   # This class should < not be used > for interacting with the API.
-  class ClientWrapper
+  class ClientWrapper < Warframe::Cache
     # The base Warframe Stat API link
     BASE_URL = 'https://api.warframestat.us/'
     # Default attributes
     DEFAULT_OPTIONS = { platform: 'pc', language: 'en' }.freeze
+
+    # The Client Cache
     attr_accessor :platform, :language
 
     # Initialize the Wrapper for {Warframe::REST::Client REST::Client}
@@ -32,6 +36,5 @@ module Warframe
       BASE_URL + platform
     end
 
-    # might need to manipulate user_agent
   end
 end
