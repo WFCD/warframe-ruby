@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 require 'fast_underscore'
-require_relative 'cache'
 
 module Warframe
   # Models of HTTP responses.
   module Models
     # Warframe Base Model.
-    class Base < Warframe::Models::Cache
+    class Base
       attr_reader :error, :code
 
       # Creates a new [Warframe::Models::Base] instance.

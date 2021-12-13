@@ -30,14 +30,10 @@ module Warframe
       # Will either return the Model, or collection of Models.
       # @return [Warframe::Models, Array<[Warframe::Models]>]
       def send
-        return @klass.cache_content if @klass.cache_is_readable? @route
-
         uri = URI(path)
         req = Net::HTTP::Get.new(uri)
         resp = get_response uri, req
-        parsed = return_parsed resp
-        @klass.new_entry(@route, parsed)
-        parsed
+        return_parsed resp
       end
 
       private
