@@ -12,10 +12,10 @@ Gem::Specification.new do |spec|
   spec.summary = 'A Ruby interface to the WarframeStat API.'
   spec.description = spec.summary
   spec.license = 'MIT'
-  spec.homepage = 'https://github.com/aj-rom/warframe-ruby'
+  spec.homepage = 'https://github.com/WFCD/warframe-ruby'
 
   # MetaData
-  spec.metadata['source_code_uri'] = 'https://github.com/aj-rom/warframe-ruby'
+  spec.metadata['source_code_uri'] = 'https://github.com/WFCD/warframe-ruby'
   spec.metadata['bug_tracker_uri'] = "#{spec.metadata['source_code_uri']}/issues"
   spec.metadata['documentation_uri'] = "https://rubydoc.info/gems/#{spec.name}"
 
