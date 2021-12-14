@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   # Required
   spec.name = 'warframe'
   spec.version = Warframe::VERSION
-  spec.authors = ['A.J. Romaniello']
+  spec.authors = ['A.J. Romaniello', 'Warframe Community Developers']
 
   # Descriptive
   spec.summary = 'A Ruby interface to the WarframeStat API.'
@@ -15,8 +15,8 @@ Gem::Specification.new do |spec|
   spec.homepage = 'https://github.com/WFCD/warframe-ruby'
 
   # MetaData
-  spec.metadata['source_code_uri'] = 'https://github.com/WFCD/warframe-ruby'
-  spec.metadata['bug_tracker_uri'] = "#{spec.metadata['source_code_uri']}/issues"
+  spec.metadata['source_code_uri'] = spec.homepage
+  spec.metadata['bug_tracker_uri'] = "#{spec.homepage}/issues"
   spec.metadata['documentation_uri'] = "https://rubydoc.info/gems/#{spec.name}"
 
   # Executables / Files
