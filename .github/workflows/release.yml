@@ -27,7 +27,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Release Gem
-        if: contains(github.ref, 'refs/tags/v')
+        if: ${{ steps.release.outputs.release_created }}
       - uses: cadwallion/publish-rubygems-action@master
         env:
           token: ${{ secrets.GH_TOKEN }}
