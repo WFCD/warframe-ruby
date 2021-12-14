@@ -1,0 +1,40 @@
+name: Release Please
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
+        with:
+          release-type: ruby
+          package-name: warframe
+          bump-minor-pre-major: true
+          version-file: "lib/warframe/version.rb"
+      - uses: actions/checkout@v2
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+          bundler-cache: true
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: bundle install
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Release Gem
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:rubygems_api_key: ${RUBYGEMS_API_KEY}\n" > $HOME/.gem/credentials
+          gem build *.gemspec
+          gem push *.gem
+        env:
+          token: ${{ secrets.GH_TOKEN }}
+          RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+        if: ${{ steps.release.outputs.release_created }}
