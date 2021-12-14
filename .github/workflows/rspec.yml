@@ -1,11 +1,6 @@
 name: RSpec
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - 'lib/**'
-      - 'spec/**'
   pull_request:
     branches: [ master ]
     paths:
@@ -23,5 +18,8 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true
-      - run: bundle exec rspec
+      - run: |
+          gem install bundler
+          bundle config unset deployment
+          bundle install
+          bundle exec rspec
