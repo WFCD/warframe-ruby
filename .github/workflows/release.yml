@@ -27,11 +27,10 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Release Gem
-        if: ${{ steps.release.outputs.release_created }}
       - uses: cadwallion/publish-rubygems-action@master
+        if: ${{ steps.release.outputs.release_created }}
         env:
           token: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
           RELEASE_COMMAND: rake release
-        if: ${{ steps.release.outputs.release_created }}
