@@ -27,10 +27,14 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Release Gem
-      - uses: cadwallion/publish-rubygems-action@master
-        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:rubygems_api_key: ${RUBYGEMS_API_KEY}\n" > $HOME/.gem/credentials
+          gem build *.gemspec
+          gem push *.gem
         env:
           token: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
-          RELEASE_COMMAND: rake release
+        if: ${{ steps.release.outputs.release_created }}
