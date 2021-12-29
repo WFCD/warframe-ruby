@@ -18,8 +18,8 @@ module Warframe
         attr_reader :activation
       end
 
-      # For models that require both {Warframe::Models::Common::Active Common::Active}
-      # and {Warframe::Models::Common::Activation Common::Activation}
+      # For models that require both {Warframe::Models::Attributes::Active Attributes::Active}
+      # and {Warframe::Models::Attributes::Activation Attributes::Activation}
       #
       # Includes both the active? and activation methods.
       module ActiveBoth
