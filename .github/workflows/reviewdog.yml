@@ -16,7 +16,6 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
           bundler-cache: false
       - uses: reviewdog/action-rubocop@v2
         with:

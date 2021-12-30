@@ -6,15 +6,15 @@ on:
 
 jobs:
   release-please:
-    
+
     # Run on latest ubuntu distribution
     runs-on: ubuntu-latest
-    
+
     # Enviroment Variables
     env:
       GEM_NAME: "warframe"
       RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
-      
+
     steps:
       # start release-please
       - uses: GoogleCloudPlatform/release-please-action@v2
@@ -25,18 +25,16 @@ jobs:
           package-name: ${{ env.GEM_NAME }}
           bump-minor-pre-major: true
           version-file: "lib/${{ env.GEM_NAME }}/version.rb"
-          
-      # Check out this repo.  
+
+      # Check out this repo.
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.release_created }}
-        
+
       # Set up ruby.
       - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.0
         if: ${{ steps.release.outputs.release_created }}
 
-      # Build and push to rubygems.org  
+      # Build and push to rubygems.org
       - name: Release Gem
         run: |
           gem install bundler
