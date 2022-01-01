@@ -1,0 +1,9 @@
+{
+  "id": "vallisCycle1641060420000",
+  "expiry": "2022-01-01T18:27:08.000Z",
+  "isWarm": false,
+  "state": "cold",
+  "activation": "2022-01-01T18:07:00.000Z",
+  "timeLeft": "5m 32s",
+  "shortString": "5m to Warm"
+}
