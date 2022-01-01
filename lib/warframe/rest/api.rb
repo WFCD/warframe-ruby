@@ -11,9 +11,10 @@ require_relative 'api/nightwave'
 require_relative 'api/sortie'
 require_relative 'api/steel_path'
 require_relative 'api/syndicate_missions'
+require_relative 'api/vallis_cycle'
 
 module Warframe
-  # A REST-ful API service, provided by https://api.warframestat.us.
+  # A REST-ful API service, provided by https://api.warframestat.us
   module REST
     # The API Router for getting live data.
     #
@@ -32,6 +33,7 @@ module Warframe
       include Warframe::REST::API::Sortie
       include Warframe::REST::API::SteelPath
       include Warframe::REST::API::SyndicateMissions
+      include Warframe::REST::API::VallisCycle
     end
   end
 end

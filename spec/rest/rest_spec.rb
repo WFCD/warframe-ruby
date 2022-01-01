@@ -48,6 +48,18 @@ def nightwave
   end
 end
 
+def vallis_cycle
+  context '#vallis_cycle' do
+    it 'does not raise error on call' do
+      expect { client.vallis_cycle }.to_not raise_error
+    end
+
+    it 'properly loads data into model' do
+      expect(client.vallis_cycle).to be_a Warframe::Models::VallisCycle
+    end
+  end
+end
+
 RSpec.describe Warframe::REST::API do
   let(:client) { Warframe::REST::Client.new }
 
@@ -55,4 +67,5 @@ RSpec.describe Warframe::REST::API do
   cetus
   cambion
   nightwave
+  vallis_cycle
 end
