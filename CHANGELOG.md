@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://www.github.com/WFCD/warframe-ruby/compare/v0.3.2...v0.4.0) (2022-01-02)
+
+
+### Features
+
+* **REST:** add `vallisCycle` route. ([#61](https://www.github.com/WFCD/warframe-ruby/issues/61)) ([f81577f](https://www.github.com/WFCD/warframe-ruby/commit/f81577fc6af0ec45948cfd57cc1d67de684ce03c))
+
 ### [0.3.2](https://www.github.com/WFCD/warframe-ruby/compare/v0.3.1...v0.3.2) (2021-12-29)
 
 
