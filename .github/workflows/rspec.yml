@@ -4,6 +4,7 @@ on:
   pull_request:
     branches: [ master ]
     paths:
+      - '.github/workflows/rspec.yml'
       - 'lib/**'
       - 'spec/**'
       - 'warframe.gemspec'
